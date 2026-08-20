@@ -3,12 +3,14 @@
 ## 1. Title & Metadata
 - **Challenge:** HashCrack
 - **Category:** Cryptography
-- **Points:** [insert]
 - **Difficulty:** Easy
 - **Platform:** picoCTF
 
 ## 2. TL;DR / Key Takeaways
 The challenge served three hashes of increasing algorithm strength (MD5 → SHA-1 → SHA-256), each protecting an extremely weak, common password. Rather than any cryptographic weakness in the algorithms themselves, the vulnerability exploited was **weak password selection** — all three plaintexts existed in public precomputed lookup tables, so each hash was reversed via a simple online lookup with no brute-forcing required.
+<img width="1810" height="945" alt="image" src="https://github.com/user-attachments/assets/69b821d8-70ac-4109-aa10-ba230497de19" />
+<img width="1113" height="420" alt="image" src="https://github.com/user-attachments/assets/3bf3adee-7a14-4aa5-86fc-525a40424a0d" />
+
 
 ## 3. Reconnaissance & Enumeration
 - **Tool used:** `nc` (netcat) to connect to the challenge service, and [CrackStation](https://crackstation.net/) (free online hash-lookup tool) to reverse each hash.
